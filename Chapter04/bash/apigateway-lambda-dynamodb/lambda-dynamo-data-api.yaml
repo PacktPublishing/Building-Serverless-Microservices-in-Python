@@ -1,0 +1,48 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: >-
+  This Lambda is invoked by API Gateway and queries DynamoDB.
+Parameters:
+    AccountId:
+        Type: String
+Resources:
+  lambdadynamodataapi:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lambda_return_dynamo_records.lambda_handler
+      Runtime: python3.6
+      CodeUri: ../../package/lambda-dynamo-data-api.zip
+      FunctionName: lambda-dynamo-data-api-sam
+      Description: >-
+        This Lambda is invoked by API Gateway and queries DynamoDB.
+      MemorySize: 128
+      Timeout: 3
+      Role: !Sub 'arn:aws:iam::${AccountId}:role/lambda-dynamo-data-api'
+      Environment:
+        Variables:
+          environment: dev
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /visits/{resourceId}
+            Method: GET
+  DynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: user-visits-sam
+      SSESpecification:
+        SSEEnabled: True
+      AttributeDefinitions:
+        - AttributeName: EventId
+          AttributeType: S
+        - AttributeName: EventDay
+          AttributeType: N
+      KeySchema:
+        - AttributeName: EventId
+          KeyType: HASH
+        - AttributeName: EventDay
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
