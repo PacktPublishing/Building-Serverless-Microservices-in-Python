@@ -58,6 +58,5 @@ has an M.Eng. in computer system engineering and a PhD in machine learning and n
 
 He has written various technical blog posts, and has acquired in excess of three years' serverless production experience in connection with large-scale, consumer-facing websites and products.
 
-## Other books by the authors
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
