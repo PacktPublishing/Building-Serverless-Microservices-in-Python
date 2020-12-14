@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/building-serverless-microservices-in-python/9781789535297)
+-----
+*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789535298).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
 # Building Serverless Microservices in Python
 
 <a href="https://www.packtpub.com/application-development/building-serverless-microservices-python?utm_source=github&utm_medium=repository&utm_campaign=9781789535297 "><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781789535297_cover.png" alt="Building Serverless Microservices in Python" height="256px" align="right"></a>
